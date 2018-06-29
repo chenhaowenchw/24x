@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>24X大数据平台</title>
+  <link rel="stylesheet" href="../css/layui.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <!-- <style>
+  	
+  	.hadoop-progress{
+		height: 18px;
+		margin-top: 6px;
+  	}
+  	.hadoop-progress span{
+  		display: block;
+  		float: left;
+  		line-height: 18px;
+  	}
+  	.progress{
+  		width: 90%;
+  		float: left;
+  	}
+
+  </style> -->
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">24X大数据平台</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">管理控制台</a></li>
+      <li class="layui-nav-item">
+      <li class="layui-nav-item">
+      	<a href="">技术与支持</a>
+      <dl class="layui-nav-child">
+          <dd><a href="">帮助与文档</a></dd>
+          <dd><a href="">博客</a></dd>
+        </dl>
+      </li>
+      <!-- <li class="layui-nav-item"><a href="">用户</a></li> -->
+      <li class="layui-nav-item">
+        <a href="javascript:;">视频演示</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">集群操作演示</a></dd>
+          <dd><a href="">数据分析演示</a></dd>
+          <dd><a href="">集群监控演示</a></dd>
+        </dl>
+      </li>
+    </ul>
+
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+      	<!-- <li class="layui-nav-item"><a href="">用户</a></li> -->
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          陈浩文
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <!-- <li class="layui-nav-item"><a href=""></a></li> -->
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">大数据生态系统</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">Hadoop</a></dd>
+            <dd><a href="javascript:;">Storm</a></dd>
+            <dd><a href="javascript:;">Spark</a></dd>
+    		<dd><a href="javascript:;">Zookeeper</a></dd>
+            <dd><a href="javascript:;">Flume</a></dd>
+            <dd><a href="javascript:;">Kafka</a></dd>
+            <dd><a href="javascript:;">Hive</a></dd>
+            <dd><a href="javascript:;">Hbase</a></dd>
+            <dd><a href="javascript:;">MORE</a></dd>
+            <!-- <dd><a href="">超链接</a></dd> -->
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">数据分析</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">离线分析</a></dd>
+            <dd><a href="javascript:;">实时分析</a></dd>
+            <!-- <dd><a href="">超链接</a></dd> -->
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">集群监控</a></li>
+        <li class="layui-nav-item"><a href="">日志</a></li>
+        <li class="layui-nav-item"><a href="">数据可视化</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+<div class="layui-tab">
+  <ul class="layui-tab-title">
+    <li class="layui-this">首页</li>
+    <li>集群控制台</li>
+    <li>服务操控台</li>
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show">
+ <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+ 
+   <!-- 首页面板 -->
+  <legend>集群面板</legend>
+</fieldset>   
+<div style="padding: 20px; background-color: #F2F2F2;">
+  <!-- hadoop -->
+  <div class="layui-row layui-col-space15">
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Hadoop</div>
+        <div class="layui-card-body">
+          运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="2%"></div>
+          </div>
+  		</div>  
+       </div>
+    </div>
+</div> 
+
+  <!-- spark -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Spark</div>
+        <div class="layui-card-body">
+          运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="3%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div>
+
+    <!--Strom  -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Strom</div>
+        <div class="layui-card-body">
+         运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div> 
+
+  <!-- more -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">MORE</div>
+        <div class="layui-card-body">
+          t1<br>
+          t2
+        </div>
+      </div>
+    </div>
+
+    <!-- strom -->
+   <!--  <div class="layui-col-md12">
+      <div class="layui-card">
+        <div class="layui-card-header">strom</div>
+        <div class="layui-card-body">
+           1<br>
+          2
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div> 
+ <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+ 
+   <!-- 组件面板 -->
+  <legend>组件面板</legend>
+</fieldset>   
+<div style="padding: 20px; background-color: #F2F2F2;">
+  <!-- zookeeper -->
+  <div class="layui-row layui-col-space15">
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Zookeeper</div>
+        <div class="layui-card-body">
+          运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div> 
+
+  <!-- Flume -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Flume</div>
+        <div class="layui-card-body">
+          运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div>
+
+    <!-- Kafka  -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Kafka</div>
+        <div class="layui-card-body">
+          运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div> 
+
+  <!-- hive -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Hive</div>
+        <div class="layui-card-body">
+         运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div>
+    <!-- strom -->
+   <!--  <div class="layui-col-md12">
+      <div class="layui-card">
+        <div class="layui-card-header">strom</div>
+        <div class="layui-card-body">
+           1<br>
+          2
+        </div>
+      </div>
+    </div> -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">Hbase</div>
+        <div class="layui-card-body">
+         运行状态：<span class="layui-badge layui-bg-orange">已停止运行</span><br>
+          <div class="hadoop-progress">
+          	<span>内存占用：</span>
+			<div class="layui-progress layui-progress-big progress" lay-showpercent="true">
+			<div class="layui-progress-bar" lay-percent="4%"></div>
+          </div>
+  		</div>  
+        </div>
+      </div>
+    </div> 
+
+  <!-- more -->
+    <div class="layui-col-md6">
+      <div class="layui-card">
+        <div class="layui-card-header">MORE</div>
+        <div class="layui-card-body">
+          1<br>
+          2
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</div>
+<!-- 集群创建 -->
+
+ <div class="layui-tab-item" style="width: 600px;">
+<div class="create-cluster-big">
+<div class="create-cluster">
+ 	<!-- 离线架构 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+  <legend>离线数据架构</legend>
+</fieldset>
+
+<div class="layui-collapse" lay-filter="test">
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Flume</h2>
+    <div class="layui-colla-content">
+    1<br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Kafka</h2>
+    <div class="layui-colla-content">
+      1<br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Zookeeper</h2>
+    <div class="layui-colla-content">
+      1<br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Hadoop</h2>
+    <div class="layui-colla-content">
+      1
+      <br>2
+    </div>
+  </div>
+
+<div class="layui-colla-item">
+    <h2 class="layui-colla-title">Hive</h2>
+    <div class="layui-colla-content">
+     <ul>
+     	<li><h3>Hive已停止运行，是否启动？</h3></li>
+     	<li>
+     <div class="testswitch">  
+            <input class="testswitch-checkbox" id="onoffswitch" type="checkbox">  
+            <label class="testswitch-label" for="onoffswitch">  
+                <span class="testswitch-inner" data-on="ON" data-off="OFF"></span>  
+                <span class="testswitch-switch"></span>  
+            </label>  
+        </div>  </li>
+    </ul>
+      <br>
+    </div>
+  </div>
+
+</div>
+
+<!-- 实时数据处理 -->
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+  <legend>实时数据架构</legend>
+</fieldset>
+<div class="layui-collapse" lay-filter="test">
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Flume</h2>
+    <div class="layui-colla-content">
+    1<br>
+          2
+    </div>
+  </div>
+  
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Zookeeper</h2>
+    <div class="layui-colla-content">
+     
+<div class="layui-form-item">
+    <label class="layui-form-label">开关</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+    </div>
+  </div>
+      <br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Kafka</h2>
+    <div class="layui-colla-content">
+      1<br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Spark Streaming</h2>
+    <div class="layui-colla-content">
+      1<br>
+          2
+    </div>
+  </div>
+
+  <div class="layui-colla-item">
+    <h2 class="layui-colla-title">Hadoop</h2>
+    <div class="layui-colla-content">
+      1
+      <br>2
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+<div class="right-instrument">
+
+	<div class="right-instrument-hadoop">
+	<div class="right-div-dwon"><img src="../homepage-images/hadoop2.png" width="230" height="100"></div>
+     <div class="right-div-top">当前版本：2.9.1</div>
+	</div>
+
+	<div class="right-instrument-hadoop">
+	   <div class="right-div-dwon"><img src="../homepage-images/storm2.png" width="230" height="100"></div>
+       <div class="right-div-top">当前版本：0.10.0</div>
+	</div>
+	<div class="right-instrument-hadoop">
+		<div class="right-div-dwon"><img src="../homepage-images/spark2.png" width="230" height="100"></div>
+        <div class="right-div-top">当前版本：1.3.1</div>
+	</div>
+	<div class="right-instrument-hadoop">
+		<div class="right-div-dwon"><img src="../homepage-images/flume2.png" width="230" height="100"></div>
+        <div class="right-div-top">当前版本：1.6.0</div>
+	</div>
+	<div class="right-instrument-hadoop">
+		<div class="right-div-dwon"><img src="../homepage-images/zk2.png" width="230" height="100"></div>
+       <div class="right-div-top">当前版本：3.4.6</div>
+   </div>
+	<div class="right-instrument-hadoop">
+		<div class="right-div-dwon"><img src="../homepage-images/kafka2.png" width="230" height="100"></div>
+       <div class="right-div-top">当前版本：2.10-0.8.2.1</div>
+	</div>
+	<div class="right-instrument-hadoop">
+		<div class="right-div-dwon"><img src="../homepage-images/hive2.png" width="230" height="100"></div>
+       <div class="right-div-top">当前版本：1.2.3</div>
+	</div>
+	<div class="right-instrument-hadoop">
+	<div class="right-div-dwon"><img src="../homepage-images/hbase2.png" width="230" height="100"></div>
+       <div class="right-div-top">当前版本：1.1.3</div>
+	</div>
+</div>
+</div>
+
+</div>
+<!-- 启动集群内容 -->   
+    <div class="layui-tab-item">内容3</div>
+   <!--  <div class="layui-tab-item">内容4</div>
+    <div class="layui-tab-item">内容5</div> -->
+  </div>
+
+
+</div>
+ 
+
+<!-- <script>
+//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+</script> -->
+   <!--  <div style="padding: 15px;">内容主体区域</div> -->
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    © chw.com 
+  </div>
+</div>
+<script src="../layui.all.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+</script>
+</body>
+</html>

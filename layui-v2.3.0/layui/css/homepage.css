@@ -1,0 +1,138 @@
+.hadoop-progress {
+  height: 18px;
+  margin-top: 6px;
+}
+
+.hadoop-progress span {
+  display: block;
+  float: left;
+  line-height: 18px;
+}
+
+.progress {
+  width: 90%;
+  float: left;
+}
+.create-cluster-big{
+  width: 1500px;
+  height:  600px;
+  border: solid 0px black;
+}
+.create-cluster{
+  width: 600px;
+  height:  600px;
+  border: solid 0px red;
+}
+.right-instrument{
+  background: #F2F2F2;
+  display: block;
+  width: 750px;
+  height: 600px;
+  float: right;
+  border: solid 1px #E6E6E6;
+  position: relative;
+  top: -602px;
+}
+.right-instrument-hadoop{
+  display: block;
+     width: 230px;
+    height: 130px;
+    border: solid 0px green;
+    float: left;
+    margin-left: 100px;
+    margin-bottom: 22px;
+
+}
+.right-div-top{
+   width: 230px;
+   height: 30px;
+   margin-top:8px;
+   border: solid 0px green;
+   margin-bottom: 0px;
+}
+.right-instrument-hadoop .right-div-dwon{
+   width: 230px;
+   height: 99px;
+   margin-top:0px;
+  border: solid 1px #E6E6E6;
+}
+
+/*集群启动开关按钮*/
+.testswitch {
+    position: relative;
+    float: right;
+    width: 90px;
+    margin: 0;
+    top: -20px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+}
+.testswitch-checkbox {
+    display: none;
+}
+
+.testswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+     height: 24px;
+    border: 1px solid #999999;
+    border-radius: 20px;
+}
+
+.testswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.testswitch-inner::before, .testswitch-inner::after {
+    display: block;
+    float: right;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family:
+    Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.testswitch-inner::after {
+    content: attr(data-on);
+    padding-left: 10px;
+    background-color: #00e500;
+    color: #FFFFFF;
+}
+.testswitch-inner::before {
+    content: attr(data-off);
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+.testswitch-switch {
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 16px;
+    margin: 4px;
+    background: #FFFFFF;
+    top: 0;
+    bottom: 0;
+    right: 56px;
+    border: 1px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.testswitch-checkbox:checked + .testswitch-label .testswitch-inner {
+    margin-left: 0;
+}
+
+.testswitch-checkbox:checked + .testswitch-label .testswitch-switch {
+    right: 0px;
+}
